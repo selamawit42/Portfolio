@@ -1,0 +1,114 @@
+/* Container and Section */
+#skills {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1b1b1b; /* Dark background */
+    color: #f5f5f5; /* White text */
+    
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #d4a373; /* Light brown */
+    letter-spacing: 1px;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 0.5rem;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+    .cols-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card styles */
+.card {
+    background-color: #2b2b2b; /* Darker card */
+    border: 1px solid #70452b; /* Brown border */
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Card body */
+.card-body h3 {
+    margin-bottom: 1rem;
+    color: #d4a373; /* Light brown heading */
+    font-size: 1.5rem;
+}
+
+.card-body .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Tag styles with animation */
+.tag {
+    padding: 0.5rem 1rem;
+    background-color: #3b3b3b; /* dark grey */
+    border: 1px solid #d4a373; /* brown border */
+    border-radius: 999px;
+    font-size: 0.9rem;
+    color: #f5f5f5;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+    background-color: #d4a373; /* light brown background on hover */
+    color: #1b1b1b; /* dark text */
+}
+
+/* Responsive font sizes */
+@media screen and (max-width: 720px) {
+    .card-body h3 {
+        font-size: 1.3rem;
+    }
+
+    .tag {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-body h3 {
+        font-size: 1.2rem;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.7rem;
+    }
+    html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px; /* change 80px to your navbar height */
+}
+}

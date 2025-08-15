@@ -1,0 +1,51 @@
+#work {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.work-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.work-card {
+  background-color: #1a1a1a; /* dark box */
+  border-left: 5px solid #6f4f28; /* brown accent */
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.work-card h3 {
+  margin: 0 0 0.5rem;
+  color: #d9b382; /* soft brown for role */
+}
+
+.work-card h4 {
+  margin: 0 0 0.3rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.work-card .dates {
+  font-size: 0.85rem;
+  color: #ccc;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.work-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #eee;
+}
