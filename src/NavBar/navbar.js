@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import logo from '../assets/MyLogo.png';
+import profile from '../assets/id.jpg';
 import contactImg from '../assets/contact.png';
 import menu from '../assets/menu.png';
 
@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <img src={logo} alt="Logo" className="logo" />
+          <img src={profile} alt="Profile" className="profile-logo" />
 
         {/* Desktop Menu */}
         <ul className="desktopMenu">

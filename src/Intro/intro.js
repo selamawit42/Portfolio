@@ -1,17 +1,12 @@
 import React from "react";
 import "./intro.css";
-import bg from "../assets/id.jpg";
-import { FaDownload, FaEnvelope } from "react-icons/fa";
+import bg from "../assets/id3.jpg";
+import { FaDownload, FaEnvelope, FaBriefcase } from "react-icons/fa";
 
 function Intro() {
   return (
     <section id="intro" className="section">
       <div className="introContent">
-        <div className="introImgWrapper">
-          <div className="imgBg"></div>
-          <img src={bg} alt="Profile" className="bg" />
-        </div>
-
         <div className="introTextWrapper">
           <span className="hello">Hello, it's me <span className="wave">👋</span></span>
           <h1 className="introName">I'm <span>Selamawit Teshome</span></h1>
@@ -32,6 +27,21 @@ function Intro() {
             <a href="#contact" className="contactBtn">
               <FaEnvelope className="btnIcon" /> Contact Me
             </a>
+          </div>
+        </div>
+
+        <div className="introImgWrapper">
+          <img src={bg} alt="Profile" className="bg" />
+          
+          {/* Floating Badge */}
+          <div className="floating-badge">
+            <div className="badge-icon">
+              <FaBriefcase />
+            </div>
+            <div className="badge-text">
+              <span className="badge-title">Developer</span>
+              <span className="badge-subtitle">Software Engineer</span>
+            </div>
           </div>
         </div>
       </div>

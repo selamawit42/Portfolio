@@ -1,63 +1,45 @@
 import React from 'react';
-import './skills.css'; // Ensure this path matches your file structure
+import './skills.css';
+import { FaCode, FaTools, FaUsers } from 'react-icons/fa';
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      title: 'Technical',
+      icon: <FaCode />,
+      skills: ['Java', 'C++', 'Python', 'PHP', 'Laravel', 'HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap', 'SQL']
+    },
+    {
+      title: 'Tools',
+      icon: <FaTools />,
+      skills: ['GitHub', 'Git', 'VS Code', 'IntelliJ IDEA', 'Eclipse', 'Apache NetBeans', 'Anaconda', 'ClickUp', 'WAMP', 'MySQL']
+    },
+    {
+      title: 'Soft Skills',
+      icon: <FaUsers />,
+      skills: ['Teamwork', 'Communication', 'Problem-solving', 'Ownership']
+    }
+  ];
+
   return (
     <section id="skills" className="section">
       <h2 className="section-title">Skills</h2>
-
-      <div className="grid cols-3">
-        {/* Technical Skills */}
-        <div className="card">
-          <div className="card-body">
-            <h3>Technical</h3>
+      <div className="skills-grid">
+        {skillCategories.map((category, index) => (
+          <div className="skill-card" key={index}>
+            <div className="skill-card-header">
+              <div className="skill-icon-wrapper">
+                {category.icon}
+              </div>
+              <h3>{category.title}</h3>
+            </div>
             <div className="tags">
-              <span className="tag">Java</span>
-              <span className="tag">C++</span>
-              <span className="tag">Python</span>
-              <span className="tag">PHP</span>
-              <span className="tag">Laravel</span>
-              <span className="tag">HTML</span>
-              <span className="tag">CSS</span>
-              <span className="tag">JavaScript</span>
-              <span className="tag">React</span>
-              <span className="tag">Bootstrap</span>
-              <span className="tag">SQL</span>
+              {category.skills.map((skill, i) => (
+                <span className="tag" key={i}>{skill}</span>
+              ))}
             </div>
           </div>
-        </div>
-
-        {/* Tools */}
-        <div className="card">
-          <div className="card-body">
-            <h3>Tools</h3>
-            <div className="tags">
-              <span className="tag">GitHub</span>
-              <span className="tag">Git</span>
-              <span className="tag">VS Code</span>
-              <span className="tag">IntelliJ IDEA</span>
-              <span className="tag">Eclipse</span>
-              <span className="tag">Apache NetBeans</span>
-              <span className="tag">Anaconda</span>
-              <span className="tag">ClickUp</span>
-              <span className="tag">WAMP</span>
-              <span className="tag">MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Soft Skills */}
-        <div className="card">
-          <div className="card-body">
-            <h3>Soft Skills</h3>
-            <div className="tags">
-              <span className="tag">Teamwork</span>
-              <span className="tag">Communication</span>
-              <span className="tag">Problem-solving</span>
-              <span className="tag">Ownership</span>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

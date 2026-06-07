@@ -39,14 +39,18 @@
     align-items: center;
 }
 
-.logo {
-    height: 2.5rem;
-    object-fit: contain;
+.profile-logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
     transition: transform 0.3s ease;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.profile-logo:hover {
+    transform: scale(1.08);
 }
 
 .desktopMenu {
